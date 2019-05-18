@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-dek",
+  "version": "1.0.0",
+  "description": "My finest Nuxt.js project",
+  "author": "Gislainy Crisostomo Veslaco",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec \"babel-node server/index.js --presets env\"",
+    "build": "babel api/src -s -D -d build --presets env &&   babel server -s -D -d build --presets env && nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "server": "nodemon -w api/src --exec \"babel-node api/src --presets env\""
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "@dekproject/routes": "latest",
+    "@dekproject/scope": "latest",
+    "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "ioredis": "latest",
+    "mongodb": "latest",
+    "mongoose": "latest",
+    "nuxt": "^2.4.0",
+    "swagger-ui-express": "^4.0.3",
+    "vuetify": "^1.5.5",
+    "vuetify-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "babel-cli": "latest",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-minify": "latest",
+    "mocha": "latest",
+    "nodemon": "^1.18.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  }
+}
